@@ -11,6 +11,6 @@ $routes = [
     "Date" => [null, ["/^[0-9]{8}$/"], "d"],
     "settings" => ["settings", null],
     "Settings" => [null, null, "settings"],
-    "_" . md5("_clear" . date("Ymd") . "uQjQpzZs49Em6kvtRt") => ["clear", null],
+    // "_" . md5("_clear" . date("Ymd") . "uQjQpzZs49Em6kvtRt") => ["clear", null],
     "_default" => ["archives", "zh-CN", date("Ymd", strtotime('yesterday'))]
 ];
