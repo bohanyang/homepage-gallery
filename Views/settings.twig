@@ -1,0 +1,53 @@
+{% set title = "设置" %}
+{% include 'header.twig' %}
+<div class="row">
+    <div class="col-xs-12">
+        <h3>设置</h3>
+    </div>
+</div>
+<form action="/settings/" method="POST">
+    <div class="row">
+        <div class="col-xs-12">
+            <input name="goto" value="{{ goto }}" style="display: none">
+            <h4>图片尺寸</h4>
+            <label class="radio" for="wp1">
+                <input type="radio" name="wp" value="1920x1080" id="wp1" data-toggle="radio">
+                1920x1080 (高清; 横向)
+            </label>
+            <label class="radio" for="wp4">
+                <input type="radio" name="wp" value="1366x768" id="wp4" data-toggle="radio" checked="checked">
+                1366x768 (标准; 横向)
+                <b>(默认)</b>
+            </label>
+            <label class="radio" for="wp2">
+                <input type="radio" name="wp" value="1080x1920" id="wp2" data-toggle="radio">
+                1080x1920 (高清; 纵向)
+            </label>
+            <label class="radio" for="wp3">
+                <input type="radio" name="wp" value="768x1280" id="wp3" data-toggle="radio">
+                768x1280 (标准; 纵向)
+            </label>
+            <h4>缩略图尺寸</h4>
+            <label class="radio" for="thumb1">
+                <input type="radio" name="thumb" value="800x480" id="thumb1" data-toggle="radio" checked="checked">
+                800x480 (标准; 横向)
+                <b>(默认)</b>
+            </label>
+            <label class="radio" for="thumb2">
+                <input type="radio" name="thumb" value="480x800" id="thumb2" data-toggle="radio">
+                480x800 (标准; 纵向)
+            </label>
+            <label class="radio" for="thumb3">
+                <input type="radio" name="thumb" value="1366x768" id="thumb3" data-toggle="radio">
+                1366x768 (高清; 横向)
+            </label>
+            <button type="submit" class="btn btn-embossed btn-primary btn-lg">完成</button>
+        </div>
+    </div>
+</form>
+</div>
+<script src="https://wpdn.bohan.co/assets/069e3dd494162aa4/js/vendor/jquery.min.js"></script>
+<script src="https://wpdn.bohan.co/assets/069e3dd494162aa4/js/flat-ui.min.js"></script>
+<script>$('[data-toggle="checkbox"]').radiocheck();$('[data-toggle="radio"]').radiocheck();</script>
+</body>
+</html>

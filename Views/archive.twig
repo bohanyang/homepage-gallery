@@ -1,0 +1,120 @@
+{% set title = archive.info %}
+{% set meta_description = archive.info %}
+{% include 'header.twig' %}
+<div class="row">
+    <div class="col-xs-12">
+        <a href="/images/{{ archive.image.name }}/"><img src="{{ mirror }}{{ archive.image.urlbase }}_{{ res }}.jpg" alt="{{ archive.info }}" class="img-rounded wallpaper"></a>
+    </div>
+    <div class="col-xs-12">
+        <button type="button" class="btn btn-link btn-block" data-toggle="modal" data-target="#about-image">下载图片</button>
+    </div>
+    {% if video %}
+        <div class="col-xs-12">
+            <a class="btn btn-link btn-block" href="{{ video }}">
+                <strong>观赏视频</strong>
+            </a>
+        </div>
+    {% endif %}
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6 pgr">
+        <a href="/d/{{ archive.date }}/" class="btn btn-embossed btn-primary btn-lg btn-block">{{ archive.market|rn }}&nbsp;({{ archive.date|md }})</a>
+    </div>
+    <div class="col-xs-6 col-md-3 pgr">
+        <a href="/archives/{{ archive.market }}/{{ archive.date|pd }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+            <i class="fui-arrow-left"></i>
+        </a>
+    </div>
+    <div class="col-xs-6 col-md-3 pgr">
+        {% if archive.date < "now" | date("Ymd") %}
+            <a href="/archives/{{ archive.market }}/{{ archive.date|nd }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+                <i class="fui-arrow-right"></i>
+            </a>
+        {% else %}
+            <button class="btn btn-embossed btn-default btn-lg btn-block" disabled="disabled">
+                <i class="fui-arrow-right"></i>
+            </button>
+        {% endif %}
+    </div>
+</div>
+{% if archive.cs %}
+    <div class="row">
+        <div class="col-xs-12 story">
+            <blockquote>
+                <p>
+                    <strong>{{ archive.cs.attribute }}:&nbsp;{{ archive.cs.title }}</strong>
+                </p>
+                <p>{{ archive.cs.para1 }}</p>
+            </blockquote>
+        </div>
+    </div>
+{% endif %}
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    <a href="{{ archive.link }}">
+                        <strong>{{ archive.info }}</strong>
+                    </a>
+                </td>
+            </tr>
+            {% for message in archive.msg %}
+                <tr>
+                    <td>{{ message.title }}&nbsp;<a href="{{ message.link }}">
+                            <strong>{{ message.text }}</strong>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for hotspot in archive.hs %}
+                <tr>
+                    <td>{{ hotspot.desc }}&nbsp;<a href="{{ hotspot.link }}">
+                            <strong>{{ hotspot.query }}</strong>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</div>
+<div class="modal fade" id="about-image" tabindex="-1" role="dialog" aria-labelledby="about-image_label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="about-image_label">下载图片</h4>
+            </div>
+            <div class="modal-body" style="padding-bottom: 5px;">
+                <ul>
+                    <li>
+                        {% if archive.image.wp == true %}
+                            <a href="{{ mirror }}{{ archive.image.urlbase }}_1920x1200.jpg" target="_blank">1920x1200 (原图)</a>
+                        {% else %}
+                            <strong>版权限制，无法提供&nbsp;1920x1200&nbsp;原图&nbsp;:-(</strong>
+                        {% endif %}
+                    </li>
+                    <li>
+                        <a href="{{ mirror }}{{ archive.image.urlbase }}_1920x1080.jpg" target="_blank">1920x1080 (横)</a>
+                    </li>
+                    <li>
+                        <a href="{{ mirror }}{{ archive.image.urlbase }}_1080x1920.jpg" target="_blank">1080x1920 (竖)</a>
+                    </li>
+                    <li>
+                        <a href="{{ mirror }}{{ archive.image.urlbase }}_1366x768.jpg" target="_blank">1366x768 (横)</a>
+                    </li>
+                    <li>
+                        <a href="{{ mirror }}{{ archive.image.urlbase }}_768x1280.jpg" target="_blank">768x1280 (竖)</a>
+                    </li>
+                </ul>
+                <small class="text-muted">&copy;&nbsp;{{ archive.image.copyright }}</small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>{% include 'footer.twig' %}

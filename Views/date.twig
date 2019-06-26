@@ -1,0 +1,45 @@
+{% set title = date | md %}
+{% include 'header.twig' %}
+<div class="row">
+
+    <div class="col-xs-12" style="padding-top: 10px; padding-bottom: 10px">
+        <h5 class="text-primary">{{ date|md }}</h5>
+    </div>
+
+</div>
+{% for image in list %}
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/images/{{ image.0.image.name }}/"><img src="{{ mirror }}{{ image.0.image.urlbase }}_{{ thumbres }}.jpg" alt="{{ image.0.image.name }}" class="img-rounded wallpaper"></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 para-of-date">
+            {% for archive in image %}
+                <a href="/archives/{{ archive.market }}/{{ archive.date }}/"><img src="{{ archive.market|flag }}" alt="{{ archive.market|rn }} ({{ date|md }}): {{ archive.info }}" class="flag-of-date"></a>
+            {% endfor %}
+        </div>
+    </div>
+{% endfor %}
+<div class="row">
+
+    <div class="col-xs-6 pgr">
+        <a href="/d/{{ date|pd }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+            <i class="fui-arrow-left"></i>
+        </a>
+    </div>
+
+    <div class="col-xs-6 pgr">
+        {% if date < "now" | date("Ymd") %}
+            <a href="/d/{{ date|nd }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+                <i class="fui-arrow-right"></i>
+            </a>
+        {% else %}
+            <button class="btn btn-embossed btn-default btn-lg btn-block" disabled="disabled">
+                <i class="fui-arrow-right"></i>
+            </button>
+        {% endif %}
+    </div>
+
+</div>
+{% include 'footer.twig' %}

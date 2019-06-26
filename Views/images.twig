@@ -1,0 +1,39 @@
+{% include 'header.twig' %}
+<div class="row">
+
+    <div class="col-xs-12 pgr">
+        <h5 class="text-primary">第 {{ page }} 页</h5>
+    </div>
+
+</div>
+{% for image in images %}
+    <div class="row">
+        <div class="col-xs-12">
+            <a href="/images/{{ image.name }}/"><img src="{{ mirror }}{{ image.urlbase }}_{{ thumbres }}.jpg" alt="{{ image.name }}" class="img-rounded wallpaper"></a>
+        </div>
+        <div class="col-xs-12">
+            <p class="text-left">
+                <a href="/images/{{ image.name }}/">{{ image.name }}</a>
+            </p>
+        </div>
+    </div>
+{% endfor %}
+<div class="row">
+    <div class="col-xs-6 pgr">
+        {% if page <= 1 %}
+            <button class="btn btn-embossed btn-default btn-lg btn-block" disabled="disabled">
+                <i class="fui-arrow-left"></i>
+            </button>
+        {% else %}
+            <a href="/p/{{ page - 1 }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+                <i class="fui-arrow-left"></i>
+            </a>
+        {% endif %}
+    </div>
+    <div class="col-xs-6 pgr">
+        <a href="/p/{{ page + 1 }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
+            <i class="fui-arrow-right"></i>
+        </a>
+    </div>
+</div>
+{% include 'footer.twig' %}
