@@ -35,17 +35,17 @@ $filters = [
     },
     "flag" => function ($a) {
         $flags = array(
-            'zh-CN' => 'https://i.loli.net/2018/11/28/5bfe46198a0f5.png',
-            'en-US' => 'https://i.loli.net/2018/11/28/5bfe461b2f231.png',
-            'en-GB' => 'https://i.loli.net/2018/11/28/5bfe46191e2f3.png',
-            'en-AU' => 'https://i.loli.net/2018/11/28/5bfe461988908.png',
-            'en-CA' => 'https://i.loli.net/2018/11/28/5bfe461a269d3.png',
-            'fr-FR' => 'https://i.loli.net/2018/11/28/5bfe461a8c16a.png',
-            'de-DE' => 'https://i.loli.net/2018/11/28/5bfe46198703c.png',
-            'pt-BR' => 'https://i.loli.net/2018/11/28/5bfe4619217f5.png',
-            'ja-JP' => 'https://i.loli.net/2018/11/28/5bfe461a1faf8.png',
-            'fr-CA' => 'https://i.loli.net/2018/11/28/5bfe478326de0.png',
-            'en-IN' => 'https://i.loli.net/2018/11/28/5bfe46191fbec.png'
+            'zh-CN' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46198a0f5.png',
+            'en-US' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461b2f231.png',
+            'en-GB' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46191e2f3.png',
+            'en-AU' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461988908.png',
+            'en-CA' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a269d3.png',
+            'fr-FR' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a8c16a.png',
+            'de-DE' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46198703c.png',
+            'pt-BR' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe4619217f5.png',
+            'ja-JP' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a1faf8.png',
+            'fr-CA' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe478326de0.png',
+            'en-IN' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46191fbec.png'
         );
         return $flags[$a];
     }
