@@ -35,17 +35,17 @@ $filters = [
     },
     "flag" => function ($a) {
         $flags = array(
-            'zh-CN' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46198a0f5.png',
-            'en-US' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461b2f231.png',
-            'en-GB' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46191e2f3.png',
-            'en-AU' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461988908.png',
-            'en-CA' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a269d3.png',
-            'fr-FR' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a8c16a.png',
-            'de-DE' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46198703c.png',
-            'pt-BR' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe4619217f5.png',
-            'ja-JP' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe461a1faf8.png',
-            'fr-CA' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe478326de0.png',
-            'en-IN' => 'https://wpdn.bohan.co/assets/069e3dd494162aa4/images/5bfe46191fbec.png'
+            'zh-CN' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46198a0f5.png',
+            'en-US' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461b2f231.png',
+            'en-GB' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46191e2f3.png',
+            'en-AU' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461988908.png',
+            'en-CA' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a269d3.png',
+            'fr-FR' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a8c16a.png',
+            'de-DE' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46198703c.png',
+            'pt-BR' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe4619217f5.png',
+            'ja-JP' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a1faf8.png',
+            'fr-CA' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe478326de0.png',
+            'en-IN' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46191fbec.png'
         );
         return $flags[$a];
     }
