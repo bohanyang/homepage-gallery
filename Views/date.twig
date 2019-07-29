@@ -30,7 +30,7 @@
     </div>
 
     <div class="col-xs-6 pgr">
-        {% if date < "now" | date("Ymd") %}
+        {% if date < "now" | date("Ymd", "-07:05") %}
             <a href="/d/{{ date|nd }}/" class="btn btn-embossed btn-primary btn-lg btn-block">
                 <i class="fui-arrow-right"></i>
             </a>
