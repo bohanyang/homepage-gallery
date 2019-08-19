@@ -35,17 +35,17 @@ $filters = [
     },
     "flag" => function ($a) {
         $flags = array(
-            'zh-CN' => '/images/5bfe46198a0f5.png',
-            'en-US' => '/images/5bfe461b2f231.png',
-            'en-GB' => '/images/5bfe46191e2f3.png',
-            'en-AU' => '/images/5bfe461988908.png',
-            'en-CA' => '/images/5bfe461a269d3.png',
-            'fr-FR' => '/images/5bfe461a8c16a.png',
-            'de-DE' => '/images/5bfe46198703c.png',
-            'pt-BR' => '/images/5bfe4619217f5.png',
-            'ja-JP' => '/images/5bfe461a1faf8.png',
-            'fr-CA' => '/images/5bfe478326de0.png',
-            'en-IN' => '/images/5bfe46191fbec.png'
+            'zh-CN' => '/assets/images/5bfe46198a0f5.png',
+            'en-US' => '/assets/images/5bfe461b2f231.png',
+            'en-GB' => '/assets/images/5bfe46191e2f3.png',
+            'en-AU' => '/assets/images/5bfe461988908.png',
+            'en-CA' => '/assets/images/5bfe461a269d3.png',
+            'fr-FR' => '/assets/images/5bfe461a8c16a.png',
+            'de-DE' => '/assets/images/5bfe46198703c.png',
+            'pt-BR' => '/assets/images/5bfe4619217f5.png',
+            'ja-JP' => '/assets/images/5bfe461a1faf8.png',
+            'fr-CA' => '/assets/images/5bfe478326de0.png',
+            'en-IN' => '/assets/images/5bfe46191fbec.png'
         );
         return $flags[$a];
     }
@@ -64,7 +64,7 @@ $renderer = [
         ];
         if (isset($archive['image']['vid'])) {
             $params['video'] = preg_replace(
-                '/\/\/az29176\.vo\.msecnd\.net/',
+                '/assets/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $archive['image']['vid']['sources'][1][2]
             );
@@ -103,7 +103,7 @@ $renderer = [
         ];
         if (isset($image[0]['image']['vid'])) {
             $params['video'] = preg_replace(
-                '/\/\/az29176\.vo\.msecnd\.net/',
+                '/assets/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $image[0]['image']['vid']['sources'][1][2]
             );
