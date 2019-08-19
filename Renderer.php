@@ -35,17 +35,17 @@ $filters = [
     },
     "flag" => function ($a) {
         $flags = array(
-            'zh-CN' => '/assets/images/5bfe46198a0f5.png',
-            'en-US' => '/assets/images/5bfe461b2f231.png',
-            'en-GB' => '/assets/images/5bfe46191e2f3.png',
-            'en-AU' => '/assets/images/5bfe461988908.png',
-            'en-CA' => '/assets/images/5bfe461a269d3.png',
-            'fr-FR' => '/assets/images/5bfe461a8c16a.png',
-            'de-DE' => '/assets/images/5bfe46198703c.png',
-            'pt-BR' => '/assets/images/5bfe4619217f5.png',
-            'ja-JP' => '/assets/images/5bfe461a1faf8.png',
-            'fr-CA' => '/assets/images/5bfe478326de0.png',
-            'en-IN' => '/assets/images/5bfe46191fbec.png'
+            'zh-CN' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe46198a0f5.png',
+            'en-US' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe461b2f231.png',
+            'en-GB' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe46191e2f3.png',
+            'en-AU' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe461988908.png',
+            'en-CA' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe461a269d3.png',
+            'fr-FR' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe461a8c16a.png',
+            'de-DE' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe46198703c.png',
+            'pt-BR' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe4619217f5.png',
+            'ja-JP' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe461a1faf8.png',
+            'fr-CA' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe478326de0.png',
+            'en-IN' => 'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/images/5bfe46191fbec.png'
         );
         return $flags[$a];
     }
@@ -64,7 +64,7 @@ $renderer = [
         ];
         if (isset($archive['image']['vid'])) {
             $params['video'] = preg_replace(
-                '/assets/\/\/az29176\.vo\.msecnd\.net/',
+                'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $archive['image']['vid']['sources'][1][2]
             );
@@ -103,7 +103,7 @@ $renderer = [
         ];
         if (isset($image[0]['image']['vid'])) {
             $params['video'] = preg_replace(
-                '/assets/\/\/az29176\.vo\.msecnd\.net/',
+                'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $image[0]['image']['vid']['sources'][1][2]
             );
