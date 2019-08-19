@@ -35,17 +35,17 @@ $filters = [
     },
     "flag" => function ($a) {
         $flags = array(
-            'zh-CN' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46198a0f5.png',
-            'en-US' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461b2f231.png',
-            'en-GB' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46191e2f3.png',
-            'en-AU' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461988908.png',
-            'en-CA' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a269d3.png',
-            'fr-FR' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a8c16a.png',
-            'de-DE' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46198703c.png',
-            'pt-BR' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe4619217f5.png',
-            'ja-JP' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe461a1faf8.png',
-            'fr-CA' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe478326de0.png',
-            'en-IN' => 'https://cdn.penbeat.cn/assets/069e3dd494162aa4/images/5bfe46191fbec.png'
+            'zh-CN' => '/images/5bfe46198a0f5.png',
+            'en-US' => '/images/5bfe461b2f231.png',
+            'en-GB' => '/images/5bfe46191e2f3.png',
+            'en-AU' => '/images/5bfe461988908.png',
+            'en-CA' => '/images/5bfe461a269d3.png',
+            'fr-FR' => '/images/5bfe461a8c16a.png',
+            'de-DE' => '/images/5bfe46198703c.png',
+            'pt-BR' => '/images/5bfe4619217f5.png',
+            'ja-JP' => '/images/5bfe461a1faf8.png',
+            'fr-CA' => '/images/5bfe478326de0.png',
+            'en-IN' => '/images/5bfe46191fbec.png'
         );
         return $flags[$a];
     }
