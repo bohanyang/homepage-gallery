@@ -29,14 +29,12 @@ $ctrls = [
             return json_encode($model->image($params[0]));
         }, $expireTime);
 
-        echo $cache->func('Page:Image:'.$params[0].':'.$config['size'], function () use ($raw, $renderer, $config) {
-            return $renderer['image'](
-                json_decode($raw, true),
-                $config['cdnImage'],
-                $config['cdnVideo'],
-                $config['size']
-            );
-        }, $expireTime);
+        echo $renderer['image'](
+            json_decode($raw, true),
+            $config['cdnImage'],
+            $config['cdnVideo'],
+            $config['size']
+        );
     },
 
     'archive' => function ($params) use ($renderer, $model, $config, $cache) {
@@ -46,14 +44,12 @@ $ctrls = [
             return json_encode($model->archive($params[0], $params[1]));
         }, $expireTime);
 
-        echo $cache->func('Archive:'.$params[0].':'.$params[1].':'.$config['size'], function () use ($renderer, $raw, $config) {
-            return $renderer['archive'](
-                json_decode($raw, true),
-                $config['cdnImage'],
-                $config['cdnVideo'],
-                $config['size']
-            );
-        }, $expireTime);
+        echo $renderer['archive'](
+            json_decode($raw, true),
+            $config['cdnImage'],
+            $config['cdnVideo'],
+            $config['size']
+        );
     },
 
     'browse' => function ($params) use ($renderer, $model, $config, $cache) {
@@ -63,14 +59,12 @@ $ctrls = [
             return json_encode($model->images($params[0], $config['perPage']));
         }, $expireTime);
 
-        echo $cache->func('Browse:'.$params[0].':'.$config['sizePreview'], function () use ($renderer, $params, $config, $raw) {
-            return $renderer['images'](
-                json_decode($raw, true),
-                $params[0],
-                $config['cdnImage'],
-                $config['sizePreview']
-            );
-        }, $expireTime);
+        echo $renderer['images'](
+            json_decode($raw, true),
+            $params[0],
+            $config['cdnImage'],
+            $config['sizePreview']
+        );
     },
 
     'date' => function ($params) use ($renderer, $model, $config, $cache) {
@@ -80,14 +74,12 @@ $ctrls = [
             return json_encode($model->archives($params[0]));
         }, $expireTime);
 
-        echo $cache->func('Date:'.$params[0].':'.$config['sizePreview'], function () use ($renderer, $params, $config, $raw) {
-            return $renderer['date'](
-                json_decode($raw, true),
-                $params[0],
-                $config['cdnImage'],
-                $config['sizePreview']
-            );
-        }, $expireTime);
+        echo $renderer['date'](
+            json_decode($raw, true),
+            $params[0],
+            $config['cdnImage'],
+            $config['sizePreview']
+        );
     },
 
     'clear' => function () use ($cache) {
