@@ -64,7 +64,7 @@ $renderer = [
         ];
         if (isset($archive['image']['vid'])) {
             $params['video'] = preg_replace(
-                'https://cdn.jsdelivr.net/gh/brentybh/homepage-gallery@5f92ffa5957159a5810d70a646ff7e805a98c4dd/assets/\/\/az29176\.vo\.msecnd\.net/',
+                '\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $archive['image']['vid']['sources'][1][2]
             );
