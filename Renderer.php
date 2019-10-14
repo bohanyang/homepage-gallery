@@ -64,7 +64,7 @@ $renderer = [
         ];
         if (isset($archive['image']['vid'])) {
             $params['video'] = preg_replace(
-                '\/\/az29176\.vo\.msecnd\.net/',
+                '/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $archive['image']['vid']['sources'][1][2]
             );
@@ -103,7 +103,7 @@ $renderer = [
         ];
         if (isset($image[0]['image']['vid'])) {
             $params['video'] = preg_replace(
-                '\/\/az29176\.vo\.msecnd\.net/',
+                '/\/\/az29176\.vo\.msecnd\.net/',
                 $v_mirror,
                 $image[0]['image']['vid']['sources'][1][2]
             );
