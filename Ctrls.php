@@ -23,7 +23,7 @@ include __DIR__.'/Renderer.php';
 
 $ctrls = [
     'image' => function ($params) use ($renderer, $model, $config, $cache) {
-        $expireTime = $cache->dailyExpire('15:04:00');
+        $expireTime = $cache->dailyExpire('16:04:00');
 
         $raw = $cache->func('Raw:Image:'.$params[0], function () use ($model, $params) {
             return json_encode($model->image($params[0]));
@@ -38,7 +38,7 @@ $ctrls = [
     },
 
     'archive' => function ($params) use ($renderer, $model, $config, $cache) {
-        $expireTime = $cache->dailyExpire('15:04:00');
+        $expireTime = $cache->dailyExpire('16:04:00');
 
         $raw = $cache->func('Raw:Archive:'.$params[0].':'.$params[1], function () use ($model, $params) {
             return json_encode($model->archive($params[0], $params[1]));
@@ -53,7 +53,7 @@ $ctrls = [
     },
 
     'browse' => function ($params) use ($renderer, $model, $config, $cache) {
-        $expireTime = $cache->dailyExpire('15:04:00');
+        $expireTime = $cache->dailyExpire('16:04:00');
 
         $raw = $cache->func('Raw:Browse:'.$params[0], function () use ($model, $params, $config) {
             return json_encode($model->images($params[0], $config['perPage']));
@@ -68,7 +68,7 @@ $ctrls = [
     },
 
     'date' => function ($params) use ($renderer, $model, $config, $cache) {
-        $expireTime = $cache->dailyExpire('15:04:00');
+        $expireTime = $cache->dailyExpire('16:04:00');
 
         $raw = $cache->func('Raw:Date:'.$params[0], function () use ($model, $params) {
             return json_encode($model->archives($params[0]));

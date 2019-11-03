@@ -11,5 +11,5 @@ $routes = [
     "Date" => [null, ["/^[0-9]{8}$/"], "d"],
     "settings" => ["settings", null],
     "Settings" => [null, null, "settings"],
-    "_default" => ["archives", "zh-CN", (new DateTime('today', new DateTimeZone('-07:05')))->format('Ymd')]
+    "_default" => ["archives", "zh-CN", (new DateTime('today', new DateTimeZone('-08:05')))->format('Ymd')]
 ];
